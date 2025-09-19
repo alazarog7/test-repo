@@ -25,11 +25,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Bye, world!
+        run: echo "HELLO, I'AM ${{vars.USERNAME}}"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "My password is:"
+          echo "${{secrets.PASSWORD}}"
 

@@ -40,7 +40,7 @@ jobs:
           --build-arg MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }} \
           --build-arg MYSQL_DB=${{ vars.MYSQL_DB }} \
           --build-arg RDS_HOST=${{ vars.RDS_HOST }} \
-          -t "${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:${{ vars.IMAGE_TAG }}" ./flask-app
+          -t "${{ vars.DOCKER_USERNAME }}/${{ vars.IMAGE_NAME }}:${{ vars.IMAGE_TAG }}" .
 
     # Step 5: Push to Docker Hub
     - name: Push to Docker Hub
